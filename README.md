@@ -6,11 +6,11 @@
 
 ## 의존성 설치
 
-Node.js와 npm이 설치된 환경에서 압축을 해제한 폴더로 이동합니다.
+Node.js 24.x와 npm이 설치된 환경에서 프로젝트 루트로 이동합니다.
 
 ```sh
-npm --prefix landing install
-npm --prefix demo install
+npm --prefix landing ci --include=dev
+npm --prefix demo ci --include=dev
 ```
 
 ## 개발 실행
@@ -39,6 +39,8 @@ npm run build
 2. 그 외 페이지 경로 → /index.html
 
 Netlify 호환 _redirects는 통합 빌드 시 생성됩니다. 다른 서버에서는 동등한 경로 설정이 필요합니다.
+
+Vercel에서는 Root Directory를 저장소 루트로 지정합니다. 루트의 `vercel.json`이 두 앱의 의존성 설치, 통합 빌드, `dist/` 출력 및 페이지 경로 fallback을 설정합니다. Node.js는 `package.json`의 `engines`에 따라 24.x를 사용합니다.
 
 Nginx 예시:
 

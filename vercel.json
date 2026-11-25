@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm --prefix landing ci --include=dev && npm --prefix demo ci --include=dev",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/demo(?:/.*)?", "dest": "/demo/index.html" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
