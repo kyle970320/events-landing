@@ -23,6 +23,7 @@ export function DataCenterHeader() {
         <span className="dc-mobile-mark"><img src={`${import.meta.env.BASE_URL}images/data-sketchers-mark.png`} alt="DATA SKETCHERS" /></span>
       </a>
       <nav aria-label="히어로 메뉴"><a href="#process">데이터 구조화</a><a href="#usecases">활용 사례</a><a href="#example">워크플로우</a></nav>
+      <a className="dc-nav-demo" href="/demo/">직접 체험하기</a>
       <a className="dc-nav-contact" href="#contact">도입 문의 <ArrowUpRight size={13} /></a>
     </div>
   </div>;
@@ -61,7 +62,7 @@ export default function DataCenterHero() {
     <div className="dc-copy">
       <h1 id="dc-title">흩어진 데이터,<br />이제 쓸 수 있는<br /><span>데이터로.</span></h1>
       <p>PDF·HWP 문서, 고객의 목소리, 키오스크 기록.<br />서로 다른 원본에서 항목과 값을 추출해<br />검색과 분석에 활용할 수 있는 데이터로 정리합니다.</p>
-      <a className="dc-primary" href="#example"><span className="dc-cta-icon"><Database size={17} /></span><span>데이터 구조화 과정 보기</span><span className="dc-cta-arrow"><ArrowUpRight size={18} /></span></a>
+      <a className="dc-primary" href="/demo/"><span className="dc-cta-icon"><Database size={17} /></span><span>데이터 작업실 직접 체험하기</span><span className="dc-cta-arrow"><ArrowUpRight size={18} /></span></a>
     </div>
     <div className="dc-bottom"><a href="#original-landing"><ArrowDown size={14} /> 더 알아보기</a><div><span>PDF · HWP · KIOSK · VOC <span aria-hidden="true">→</span> STRUCTURED DATA</span>{motion && ready && <button className="dc-playback" onClick={togglePlayback} aria-label={paused ? "애니메이션 재생" : "애니메이션 일시정지"}>{paused ? <Play size={13} /> : <Pause size={13} />}</button>}</div></div>
   </section>;
